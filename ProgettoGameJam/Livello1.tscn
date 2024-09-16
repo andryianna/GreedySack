@@ -1,48 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://me3ehk61bvnb"]
+[gd_scene load_steps=4 format=3 uid="uid://me3ehk61bvnb"]
 
 [ext_resource type="PackedScene" uid="uid://bvg6rbdt1oici" path="res://Personaggio.tscn" id="1_vk7ac"]
-[ext_resource type="PackedScene" uid="uid://d24ey8im856r6" path="res://piattaforma.tscn" id="2_w3jyx"]
-[ext_resource type="PackedScene" uid="uid://cskddw3dn85m5" path="res://bottone.tscn" id="3_t6l06"]
+[ext_resource type="PackedScene" uid="uid://6dmmhwv5ko31" path="res://moneta.tscn" id="2_vpsf4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6jl63"]
 size = Vector2(2000, 20)
-
-[sub_resource type="Animation" id="Animation_w2662"]
-resource_name = "movimento"
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.1, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(254, -321), Vector2(-266, -689)]
-}
-
-[sub_resource type="Animation" id="Animation_pb4ic"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(254, -321)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_yor3s"]
-_data = {
-"RESET": SubResource("Animation_pb4ic"),
-"movimento": SubResource("Animation_w2662")
-}
 
 [node name="Livello1" type="Node2D"]
 
@@ -55,17 +17,64 @@ position = Vector2(6, 123)
 shape = SubResource("RectangleShape2D_6jl63")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(19, 19)
 zoom = Vector2(0.5, 0.5)
 
-[node name="piattaforma" parent="." instance=ExtResource("2_w3jyx")]
-position = Vector2(254, -321)
+[node name="Moneta6" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(446, -94)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="piattaforma"]
-libraries = {
-"": SubResource("AnimationLibrary_yor3s")
-}
-autoplay = "movimento"
+[node name="Moneta7" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(346, -94)
 
-[node name="bottone" parent="." instance=ExtResource("3_t6l06")]
-position = Vector2(78, -281)
+[node name="Moneta8" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(246, -94)
+
+[node name="Moneta9" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(546, -94)
+
+[node name="Moneta10" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(646, -94)
+
+[node name="Moneta" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(500, 0)
+
+[node name="Moneta2" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(400, 0)
+
+[node name="Moneta3" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(300, 0)
+
+[node name="Moneta4" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(600, 0)
+
+[node name="Moneta5" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(700, 0)
+
+[node name="Moneta11" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(520, -305)
+
+[node name="Moneta12" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(420, -305)
+
+[node name="Moneta13" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(320, -305)
+
+[node name="Moneta14" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(620, -305)
+
+[node name="Moneta15" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(720, -305)
+
+[node name="Moneta16" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(574, -211)
+
+[node name="Moneta17" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(474, -211)
+
+[node name="Moneta18" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(374, -211)
+
+[node name="Moneta19" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(674, -211)
+
+[node name="Moneta20" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(774, -211)
