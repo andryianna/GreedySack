@@ -1,9 +1,48 @@
-[gd_scene load_steps=3 format=3 uid="uid://me3ehk61bvnb"]
+[gd_scene load_steps=8 format=3 uid="uid://me3ehk61bvnb"]
 
 [ext_resource type="PackedScene" uid="uid://bvg6rbdt1oici" path="res://Personaggio.tscn" id="1_vk7ac"]
+[ext_resource type="PackedScene" uid="uid://d24ey8im856r6" path="res://piattaforma.tscn" id="2_w3jyx"]
+[ext_resource type="PackedScene" uid="uid://cskddw3dn85m5" path="res://bottone.tscn" id="3_t6l06"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6jl63"]
 size = Vector2(2000, 20)
+
+[sub_resource type="Animation" id="Animation_w2662"]
+resource_name = "movimento"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(254, -321), Vector2(-266, -689)]
+}
+
+[sub_resource type="Animation" id="Animation_pb4ic"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(254, -321)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yor3s"]
+_data = {
+"RESET": SubResource("Animation_pb4ic"),
+"movimento": SubResource("Animation_w2662")
+}
 
 [node name="Livello1" type="Node2D"]
 
@@ -16,4 +55,17 @@ position = Vector2(6, 123)
 shape = SubResource("RectangleShape2D_6jl63")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(19, 19)
 zoom = Vector2(0.5, 0.5)
+
+[node name="piattaforma" parent="." instance=ExtResource("2_w3jyx")]
+position = Vector2(254, -321)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="piattaforma"]
+libraries = {
+"": SubResource("AnimationLibrary_yor3s")
+}
+autoplay = "movimento"
+
+[node name="bottone" parent="." instance=ExtResource("3_t6l06")]
+position = Vector2(78, -281)
