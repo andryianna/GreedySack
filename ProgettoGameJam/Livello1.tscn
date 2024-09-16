@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://me3ehk61bvnb"]
+
+[ext_resource type="PackedScene" uid="uid://bvg6rbdt1oici" path="res://Personaggio.tscn" id="1_vk7ac"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jl63"]
+size = Vector2(2000, 20)
+
+[node name="Livello1" type="Node2D"]
+
+[node name="Personaggio" parent="." instance=ExtResource("1_vk7ac")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(6, 123)
+shape = SubResource("RectangleShape2D_6jl63")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
