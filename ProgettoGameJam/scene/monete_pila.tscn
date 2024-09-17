@@ -1,0 +1,541 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcpx74uvi56h"]
+
+[ext_resource type="Script" path="res://script/monete_pila.gd" id="1_k6t1b"]
+[ext_resource type="Texture2D" uid="uid://ds62ldwgsrpna" path="res://sprite/Coin.png" id="2_8an4l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ypyyk"]
+size = Vector2(25, 10)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ny08x"]
+a = Vector2(-12.5, -5)
+b = Vector2(12.5, -5)
+
+[node name="MonetePila" type="Node2D"]
+position = Vector2(7, -61)
+scale = Vector2(1.2, 1.2)
+script = ExtResource("1_k6t1b")
+
+[node name="Moneta1" type="RigidBody2D" parent="."]
+position = Vector2(-7, 61)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta1"]
+position = Vector2(0, -0.16667)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta1"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta1"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta1/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta2" type="RigidBody2D" parent="."]
+position = Vector2(-32, 61)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta2"]
+position = Vector2(0, -0.166669)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta2"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta2"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta3" type="RigidBody2D" parent="."]
+position = Vector2(18, 61)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta3"]
+position = Vector2(0, -0.166669)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta3"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta3"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta3/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta4" type="RigidBody2D" parent="."]
+position = Vector2(4, 51)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta4"]
+position = Vector2(0, -0.16667)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta4"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta4"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta4/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta5" type="RigidBody2D" parent="."]
+position = Vector2(-21, 51)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta5"]
+position = Vector2(0, -0.16667)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta5"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta5"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta5/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta6" type="RigidBody2D" parent="."]
+position = Vector2(29, 51)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta6"]
+position = Vector2(0, -0.16667)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta6"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta6"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta6/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta7" type="RigidBody2D" parent="."]
+position = Vector2(-7, 41)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta7"]
+position = Vector2(0, -0.16667)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta7"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta7"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta7/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta8" type="RigidBody2D" parent="."]
+position = Vector2(-32, 41)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta8"]
+position = Vector2(0, -0.16667)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta8"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta8"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta8/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta9" type="RigidBody2D" parent="."]
+position = Vector2(18, 41)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta9"]
+position = Vector2(0, -0.16667)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta9"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta9"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta9/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta10" type="RigidBody2D" parent="."]
+position = Vector2(4, 31)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta10"]
+position = Vector2(0, -0.16667)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta10"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta10"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta10/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta11" type="RigidBody2D" parent="."]
+position = Vector2(-21, 31)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta11"]
+position = Vector2(0, -0.16667)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta11"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta11"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta11/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta12" type="RigidBody2D" parent="."]
+position = Vector2(29, 31)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta12"]
+position = Vector2(0, -0.16667)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta12"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta12"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta12/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta13" type="RigidBody2D" parent="."]
+position = Vector2(-7, 21)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta13"]
+position = Vector2(0, -0.16667)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta13"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta13"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta13/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta14" type="RigidBody2D" parent="."]
+position = Vector2(-32, 21)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta14"]
+position = Vector2(0, -0.16667)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta14"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta14"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta14/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta15" type="RigidBody2D" parent="."]
+position = Vector2(18, 21)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta15"]
+position = Vector2(0, -0.16667)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta15"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta15"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta15/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta16" type="RigidBody2D" parent="."]
+position = Vector2(4, 11)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta16"]
+position = Vector2(0, -0.166672)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta16"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta16"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta16/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta17" type="RigidBody2D" parent="."]
+position = Vector2(-21, 11)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta17"]
+position = Vector2(0, -0.166672)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta17"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta17"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta17/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta18" type="RigidBody2D" parent="."]
+position = Vector2(29, 11)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta18"]
+position = Vector2(0, -0.166672)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta18"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta18"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta18/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta19" type="RigidBody2D" parent="."]
+position = Vector2(-7, 1)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta19"]
+position = Vector2(0, -0.166672)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta19"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta19"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta19/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta20" type="RigidBody2D" parent="."]
+position = Vector2(-32, 1)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta20"]
+position = Vector2(0, -0.166672)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta20"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta20"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta20/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta21" type="RigidBody2D" parent="."]
+position = Vector2(18, 1)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta21"]
+position = Vector2(0, -0.166672)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta21"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta21"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta21/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta22" type="RigidBody2D" parent="."]
+position = Vector2(4, -9)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta22"]
+position = Vector2(0, -0.166668)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta22"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta22"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta22/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta23" type="RigidBody2D" parent="."]
+position = Vector2(-21, -9)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta23"]
+position = Vector2(0, -0.166668)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta23"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta23"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta23/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta24" type="RigidBody2D" parent="."]
+position = Vector2(29, -9)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta24"]
+position = Vector2(0, -0.166668)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta24"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta24"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta24/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
+
+[node name="Moneta25" type="RigidBody2D" parent="."]
+position = Vector2(-7, -19)
+collision_layer = 4
+collision_mask = 6
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Moneta25"]
+position = Vector2(0, -0.166672)
+scale = Vector2(0.2, 0.268456)
+texture = ExtResource("2_8an4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta25"]
+shape = SubResource("RectangleShape2D_ypyyk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moneta25"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneta25/StaticBody2D"]
+shape = SubResource("SegmentShape2D_ny08x")
+one_way_collision = true
