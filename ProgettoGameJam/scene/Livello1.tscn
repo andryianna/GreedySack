@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://me3ehk61bvnb"]
+
+[ext_resource type="Script" path="res://script/livello.gd" id="1_vxjm7"]
+[ext_resource type="PackedScene" uid="uid://bvg6rbdt1oici" path="res://scene/Personaggio.tscn" id="2_tt4ir"]
+[ext_resource type="PackedScene" uid="uid://6dmmhwv5ko31" path="res://scene/moneta_gravità.tscn" id="3_3wn2a"]
+[ext_resource type="PackedScene" uid="uid://54jxfvkqs6r7" path="res://scene/moneta_volante.tscn" id="4_0yilh"]
+[ext_resource type="PackedScene" uid="uid://bcpx74uvi56h" path="res://scene/monete_pila.tscn" id="5_gfem6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jl63"]
+size = Vector2(2000, 20)
+
+[node name="Livello1" type="Node2D"]
+script = ExtResource("1_vxjm7")
+
+[node name="Personaggio" parent="." instance=ExtResource("2_tt4ir")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(6, 123)
+shape = SubResource("RectangleShape2D_6jl63")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+
+[node name="Moneta6" parent="." instance=ExtResource("3_3wn2a")]
+position = Vector2(462, -324)
+
+[node name="Moneta7" parent="." instance=ExtResource("3_3wn2a")]
+position = Vector2(362, -324)
+
+[node name="Moneta8" parent="." instance=ExtResource("3_3wn2a")]
+position = Vector2(262, -324)
+
+[node name="Moneta9" parent="." instance=ExtResource("3_3wn2a")]
+position = Vector2(562, -324)
+
+[node name="Moneta10" parent="." instance=ExtResource("3_3wn2a")]
+position = Vector2(662, -324)
+
+[node name="Moneta" parent="." instance=ExtResource("3_3wn2a")]
+position = Vector2(516, -230)
+
+[node name="Moneta2" parent="." instance=ExtResource("3_3wn2a")]
+position = Vector2(416, -230)
+
+[node name="Moneta3" parent="." instance=ExtResource("3_3wn2a")]
+position = Vector2(316, -230)
+
+[node name="Moneta4" parent="." instance=ExtResource("3_3wn2a")]
+position = Vector2(616, -230)
+
+[node name="Moneta5" parent="." instance=ExtResource("3_3wn2a")]
+position = Vector2(716, -230)
+
+[node name="MonetaVolante3" parent="." instance=ExtResource("4_0yilh")]
+position = Vector2(659, -18)
+
+[node name="MonetaVolante4" parent="." instance=ExtResource("4_0yilh")]
+position = Vector2(759, -18)
+
+[node name="MonetaVolante" parent="." instance=ExtResource("4_0yilh")]
+position = Vector2(606, -64)
+
+[node name="MonetaVolante2" parent="." instance=ExtResource("4_0yilh")]
+position = Vector2(706, -64)
+
+[node name="MonetaVolante5" parent="." instance=ExtResource("4_0yilh")]
+position = Vector2(460, -17)
+
+[node name="MonetaVolante6" parent="." instance=ExtResource("4_0yilh")]
+position = Vector2(560, -17)
+
+[node name="MonetaVolante7" parent="." instance=ExtResource("4_0yilh")]
+position = Vector2(407, -63)
+
+[node name="MonetaVolante8" parent="." instance=ExtResource("4_0yilh")]
+position = Vector2(507, -63)
+
+[node name="MonetePila" parent="." instance=ExtResource("5_gfem6")]
+position = Vector2(-172, 31)

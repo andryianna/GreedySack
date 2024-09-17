@@ -1,0 +1,95 @@
+[gd_scene load_steps=7 format=3 uid="uid://me3ehk61bvnb"]
+
+[ext_resource type="PackedScene" uid="uid://bvg6rbdt1oici" path="res://Personaggio.tscn" id="1_vk7ac"]
+[ext_resource type="PackedScene" uid="uid://6dmmhwv5ko31" path="res://moneta.tscn" id="2_vpsf4"]
+[ext_resource type="PackedScene" uid="uid://d24ey8im856r6" path="res://piattaforma.tscn" id="3_hhvsp"]
+[ext_resource type="PackedScene" uid="uid://fk0uwmlmwbdn" path="res://ponte.tscn" id="4_r2occ"]
+[ext_resource type="PackedScene" uid="uid://cskddw3dn85m5" path="res://bottone.tscn" id="5_g0nl7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jl63"]
+size = Vector2(2000, 20)
+
+[node name="Livello1" type="Node2D"]
+
+[node name="Personaggio" parent="." instance=ExtResource("1_vk7ac")]
+position = Vector2(15, -57)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(6, 123)
+shape = SubResource("RectangleShape2D_6jl63")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+
+[node name="Moneta6" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(446, -94)
+
+[node name="Moneta7" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(346, -94)
+
+[node name="Moneta8" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(246, -94)
+
+[node name="Moneta9" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(546, -94)
+
+[node name="Moneta10" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(646, -94)
+
+[node name="Moneta" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(500, 0)
+
+[node name="Moneta2" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(400, 0)
+
+[node name="Moneta3" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(300, 0)
+
+[node name="Moneta4" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(600, 0)
+
+[node name="Moneta5" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(700, 0)
+
+[node name="Moneta11" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(520, -305)
+
+[node name="Moneta12" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(420, -305)
+
+[node name="Moneta13" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(320, -305)
+
+[node name="Moneta14" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(620, -305)
+
+[node name="Moneta15" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(720, -305)
+
+[node name="Moneta16" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(574, -211)
+
+[node name="Moneta17" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(474, -211)
+
+[node name="Moneta18" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(374, -211)
+
+[node name="Moneta19" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(674, -211)
+
+[node name="Moneta20" parent="." instance=ExtResource("2_vpsf4")]
+position = Vector2(774, -211)
+
+[node name="ponte" parent="." instance=ExtResource("4_r2occ")]
+position = Vector2(-1156, 14)
+
+[node name="piattaforma" parent="." instance=ExtResource("3_hhvsp")]
+scale = Vector2(1.11143, 0.97538)
+
+[node name="bottone" parent="." instance=ExtResource("5_g0nl7")]
+position = Vector2(-418, 92)
+
+[connection signal="pressed" from="bottone" to="piattaforma" method="_on_bottone_pressed"]

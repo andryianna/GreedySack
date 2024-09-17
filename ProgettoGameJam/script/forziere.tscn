@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8fw0l8k0c8hs"]
+
+[ext_resource type="Script" path="res://forziere.gd" id="1_fwnqf"]
+[ext_resource type="Texture2D" uid="uid://fom7vd7d3k3v" path="res://sprite/light-wood-closed.png" id="1_ysoa3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_se8mt"]
+size = Vector2(109.5, 105.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbrcn"]
+size = Vector2(114, 109)
+
+[node name="forziere" type="Node2D"]
+script = ExtResource("1_fwnqf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(156, 132)
+shape = SubResource("RectangleShape2D_se8mt")
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
+position = Vector2(154, 132)
+shape = SubResource("RectangleShape2D_gbrcn")
+
+[node name="chiuso" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(154, 131)
+scale = Vector2(0.488162, 0.583665)
+texture = ExtResource("1_ysoa3")
+
+[connection signal="area_entered" from="StaticBody2D/Area2D" to="." method="_on_area_2d_area_entered"]

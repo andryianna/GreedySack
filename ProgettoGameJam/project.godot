@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GAMEJAM2"
-run/main_scene="res://Livello1.tscn"
+run/main_scene="res://scene/Livello1.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -69,6 +69,7 @@ svuota={
 2d_physics/layer_2="walls"
 2d_physics/layer_3="coins"
 2d_physics/layer_4="platform"
+2d_physics/layer_5="forziere"
 
 [rendering]
 
