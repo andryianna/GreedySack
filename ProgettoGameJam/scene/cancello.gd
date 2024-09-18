@@ -1,6 +1,7 @@
 extends Node2D
 
 func attiva():
+	$AudioStreamPlayer.play()
 	$StaticBody2D/AnimationPlayer.play("movimento_in_basso")
 	await $StaticBody2D/AnimationPlayer.animation_finished
 	$StaticBody2D/AnimationPlayer.pause()

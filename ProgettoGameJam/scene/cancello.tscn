@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7adbhdefgx6g"]
+[gd_scene load_steps=9 format=3 uid="uid://c7adbhdefgx6g"]
 
 [ext_resource type="Script" path="res://scene/cancello.gd" id="1_btbdk"]
 [ext_resource type="Texture2D" uid="uid://w2wxyu4mc8vs" path="res://sprite/gate.png" id="2_pfasm"]
+[ext_resource type="AudioStream" uid="uid://bbufitno63g4b" path="res://sounds/gate open (make faster).mp3" id="3_wxkv5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8n1l4"]
 size = Vector2(64, 512)
@@ -78,3 +79,7 @@ shape = SubResource("RectangleShape2D_8n1l4")
 libraries = {
 "": SubResource("AnimationLibrary_pb8em")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wxkv5")
+pitch_scale = 1.5

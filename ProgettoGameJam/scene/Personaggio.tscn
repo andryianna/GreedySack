@@ -1,8 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bvg6rbdt1oici"]
+[gd_scene load_steps=14 format=3 uid="uid://bvg6rbdt1oici"]
 
 [ext_resource type="Script" path="res://script/Personaggio.gd" id="1_fylyr"]
+[ext_resource type="AudioStream" uid="uid://bb0iw7ysj13wx" path="res://assets/Esterno.mp3" id="2_4vg8l"]
 [ext_resource type="Texture2D" uid="uid://bbrl2h1qyj4it" path="res://sprite/Baggy.png" id="2_i1p47"]
 [ext_resource type="Texture2D" uid="uid://cw8w8qu3ttuyx" path="res://sprite/Walk.png" id="3_pofst"]
+[ext_resource type="AudioStream" uid="uid://dtx7n1ts0bh61" path="res://sounds/coin drop.mp3" id="5_hgyau"]
+[ext_resource type="AudioStream" uid="uid://bivwevqdrtrrc" path="res://sounds/coin collect.mp3" id="6_emmlj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4c5tc"]
 size = Vector2(120, 121)
@@ -72,8 +75,18 @@ position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_4c5tc")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_4vg8l")
+volume_db = -10.0
+autoplay = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_mgtjx")
 animation = &"Idle"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_hgyau")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_emmlj")
+volume_db = 24.0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://fk0uwmlmwbdn"]
 
 [ext_resource type="Script" path="res://script/ponte.gd" id="1_g6had"]
-[ext_resource type="Texture2D" uid="uid://c7a8se806jo0m" path="res://icon.svg" id="2_qmrca"]
+[ext_resource type="Texture2D" uid="uid://bbwka74xlpa0s" path="res://sprite/Bricked.png" id="2_87x0g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_daguk"]
 size = Vector2(128, 64)
@@ -17,8 +17,9 @@ collision_layer = 2
 collision_mask = 21
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-scale = Vector2(3.65625, 0.726563)
-texture = ExtResource("2_qmrca")
+position = Vector2(1, -0.499999)
+scale = Vector2(1.01172, 1.03125)
+texture = ExtResource("2_87x0g")
 
 [node name="Area2D" type="Area2D" parent="StaticBody2D"]
 collision_layer = 2
