@@ -16,6 +16,8 @@ var jump_velocity = -400.0 / weight_modifier
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+@onready var animator = $AnimatedSprite2D
+
 func _process(_delta: float) -> void:
 	#Reset Livello
 	if Input.is_action_just_pressed("restart_level"):
@@ -38,8 +40,18 @@ func _physics_process(delta):
 	var direction = Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction * SPEED
+		
+		if velocity.x >0:
+			animator.flip_h = false
+			animator.play("Run")
+			
+		if velocity.x <0:
+			animator.flip_h = true
+			animator.play("Run")
+			
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		animator.play("Idle")
 
 	move_and_slide()
 

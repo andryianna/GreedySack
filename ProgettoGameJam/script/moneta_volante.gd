@@ -1,8 +1,10 @@
 extends Area2D
 
+@onready var animator = $AnimatedSprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	animator.play("Rotate")
 	pass # Replace with function body.
 
 
@@ -12,5 +14,6 @@ func _process(delta: float) -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
+	
 	area.get_parent().weight_modifier += 0.05
 	queue_free()
