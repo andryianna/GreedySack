@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3c2cvcfm8fe"]
+
+[ext_resource type="Script" path="res://title_screen.gd" id="1_nawff"]
+[ext_resource type="Texture2D" uid="uid://bapuw3r43i8mj" path="res://Backgrounds/FANTASY LANDSCAPE BACKGROUND 1.png" id="2_w08n5"]
+[ext_resource type="Texture2D" uid="uid://b8ybp282awnjr" path="res://assets/Title_done.png" id="3_pxxur"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h467u"]
+font_size = 25
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nawff")
+
+[node name="FantasyLandscapeBackground1" type="Sprite2D" parent="."]
+position = Vector2(578.5, 326.5)
+scale = Vector2(0.604688, 0.608333)
+texture = ExtResource("2_w08n5")
+
+[node name="TitleDone" type="Sprite2D" parent="."]
+position = Vector2(574, 194)
+texture = ExtResource("3_pxxur")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.5
+offset_top = 76.0
+offset_right = 107.5
+offset_bottom = 155.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Game"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -156.0
+offset_top = -75.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Arrow keys to move
+Z,X or C to spit coins
+R to reset"
+label_settings = SubResource("LabelSettings_h467u")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

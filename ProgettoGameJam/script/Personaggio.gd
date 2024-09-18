@@ -7,10 +7,14 @@ var key = false
 
 var weight_modifier = 1:
 	set(value):
+		if value != 1:
+			if !$AudioStreamPlayer3.playing:
+				$AudioStreamPlayer3.play()
 		if value <= 2.25:
 			weight_modifier = value
 			jump_velocity = -400.0 / weight_modifier
 			scale = Vector2(value, value)
+			$AudioStreamPlayer.pitch_scale = 1 / weight_modifier
 var jump_velocity = -400.0 / weight_modifier
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -57,7 +61,10 @@ func _physics_process(delta):
 
 func crea_pila(weight):
 	if weight > 1:
+		$AudioStreamPlayer2.play()
 		var pila_instance = pila.instantiate()
 		pila_instance.numero_monete = (weight - 1) / 0.05
 		pila_instance.position = position
 		get_parent().add_child(pila_instance)
+		await get_tree().create_timer(weight / 2).timeout
+		$AudioStreamPlayer2.stop()

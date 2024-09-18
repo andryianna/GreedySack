@@ -19,6 +19,7 @@ func _process(delta: float) -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if !premuto:
 		if area.get_parent().weight_modifier > peso_limite:
+			$AudioStreamPlayer.play()
 			pressed.emit()
 			premuto = true
 			$StaticBody2D/buttonoff.texture = schiacciato

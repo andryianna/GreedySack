@@ -24,7 +24,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 				monetai.linear_velocity = Vector2(50, -800)
 			else: 
 				monetai.linear_velocity = Vector2(-50, -800)
-			monetai.position = Vector2(position.x, position.y + 50)
+			monetai.position = Vector2(position.x, position.y - 100)
 			get_parent().call_deferred("add_child", monetai)
 		
 	pass # Replace with function body.
