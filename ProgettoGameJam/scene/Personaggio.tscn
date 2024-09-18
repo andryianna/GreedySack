@@ -25,3 +25,5 @@ monitoring = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_4c5tc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

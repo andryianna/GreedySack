@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://1ipurn3tj6x2"]
+[gd_scene load_steps=13 format=3 uid="uid://1ipurn3tj6x2"]
 
 [ext_resource type="PackedScene" uid="uid://bvg6rbdt1oici" path="res://scene/Personaggio.tscn" id="1_sscnc"]
 [ext_resource type="PackedScene" uid="uid://cskddw3dn85m5" path="res://scene/bottone.tscn" id="4_vngkq"]
@@ -9,8 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://d24ey8im856r6" path="res://scene/piattaforma.tscn" id="7_0hfqg"]
 [ext_resource type="Texture2D" uid="uid://bapuw3r43i8mj" path="res://Backgrounds/FANTASY LANDSCAPE BACKGROUND 1.png" id="7_00udm"]
 [ext_resource type="PackedScene" uid="uid://54jxfvkqs6r7" path="res://scene/moneta_volante.tscn" id="8_368ch"]
+[ext_resource type="PackedScene" uid="uid://c7adbhdefgx6g" path="res://scene/cancello.tscn" id="10_xuvtc"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xiis4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l54pc"]
 texture = ExtResource("5_sdmms")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -20,7 +21,7 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 2
 physics_layer_0/collision_mask = 5
-sources/0 = SubResource("TileSetAtlasSource_xiis4")
+sources/0 = SubResource("TileSetAtlasSource_l54pc")
 
 [node name="Tutorial" type="Node2D"]
 
@@ -33,30 +34,30 @@ scale = Vector2(2323.38, -107.709)
 zoom = Vector2(0.5, 0.5)
 
 [node name="Chiave" parent="." instance=ExtResource("6_qdxvb")]
-position = Vector2(568, 198)
+position = Vector2(540, 156)
 scale = Vector2(0.262637, 0.193261)
 
 [node name="ponte" parent="." instance=ExtResource("5_vrno4")]
-position = Vector2(435, 228)
+position = Vector2(797, 323)
 
 [node name="FantasyLandscapeBackground1" type="Sprite2D" parent="."]
 show_behind_parent = true
-position = Vector2(675, 322)
+position = Vector2(-1050, 363)
 texture = ExtResource("7_00udm")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_1ucgw")
 format = 2
-layer_0/tile_data = PackedInt32Array(1114116, 0, 0, 1114117, 0, 0, 1114118, 0, 0, 1114119, 0, 0, 1114120, 0, 0, 1114121, 0, 0, 1114122, 0, 0, 1048587, 0, 0, 1048588, 0, 0, 1048589, 0, 0, 1048590, 0, 0, 1048591, 0, 0, 1048592, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048597, 0, 0, 1048598, 0, 0, 1114125, 0, 0, 1114124, 0, 0, 1114123, 0, 0, 1179656, 0, 0, 1179655, 0, 0, 1245190, 0, 0, 1245191, 0, 0, 1245192, 0, 0, 1245193, 0, 0, 1245194, 0, 0, 1245195, 0, 0, 1245196, 0, 0, 1245197, 0, 0, 1245198, 0, 0, 1179660, 0, 0, 1179659, 0, 0, 1179658, 0, 0, 1179657, 0, 0, 1114115, 0, 0, 1114114, 0, 0, 1114126, 0, 0, 1179663, 0, 0, 1179664, 0, 0, 1179665, 0, 0, 1179662, 0, 0, 1179661, 0, 0, 1245199, 0, 0, 1245200, 0, 0, 1245201, 0, 0, 1245202, 0, 0, 1245203, 0, 0, 1245204, 0, 0, 1245205, 0, 0, 1245206, 0, 0, 1245207, 0, 0, 1245208, 0, 0, 1245209, 0, 0, 1245210, 0, 0, 1179669, 0, 0, 1179668, 0, 0, 1179667, 0, 0, 1179666, 0, 0, 1114127, 0, 0, 1048599, 0, 0, 1114132, 0, 0, 1114131, 0, 0, 1114129, 0, 0, 1114130, 0, 0, 1114128, 0, 0, 393257, 0, 0, 458793, 0, 0, 524329, 0, 0, 589865, 0, 0, 655401, 0, 0, 720936, 0, 0, 786472, 0, 0, 852008, 0, 0, 917544, 0, 0, 983079, 0, 0, 983078, 0, 0, 983077, 0, 0, 983076, 0, 0, 983075, 0, 0, 983074, 0, 0, 983073, 0, 0, 983072, 0, 0, 1048607, 0, 0, 1048606, 0, 0, 1048605, 0, 0, 1048604, 0, 0, 1048603, 0, 0, 1048602, 0, 0, 1048601, 0, 0, 1048600, 0, 0, 983061, 0, 0, 983062, 0, 0, 983063, 0, 0)
 
 [node name="forziere" parent="." instance=ExtResource("6_qakeu")]
-position = Vector2(1047, 228)
+position = Vector2(795, 30)
 
 [node name="bottone" parent="." instance=ExtResource("4_vngkq")]
-position = Vector2(385, 306)
+position = Vector2(480, 526)
+peso_limite = null
 
 [node name="Piattaforma" parent="." instance=ExtResource("7_0hfqg")]
-position = Vector2(318, 401)
+position = Vector2(1182, 225)
 
 [node name="MonetaVolante" parent="." instance=ExtResource("8_368ch")]
 position = Vector2(670, 182)
@@ -67,4 +68,8 @@ position = Vector2(910, 192)
 [node name="MonetaVolante3" parent="." instance=ExtResource("8_368ch")]
 position = Vector2(704, 141)
 
+[node name="Cancello" parent="." instance=ExtResource("10_xuvtc")]
+position = Vector2(98, 286)
+
 [connection signal="pressed" from="bottone" to="Piattaforma" method="attiva"]
+[connection signal="pressed" from="bottone" to="Cancello" method="attiva"]

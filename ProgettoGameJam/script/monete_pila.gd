@@ -5,7 +5,6 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for i in range(numero_monete + 1, 26):
-		print("Eliminata")
 		get_node("Moneta" + str(i)).get_child(0).visible = false
 		get_node("Moneta" + str(i)).get_child(1).disabled = true
 

@@ -7,9 +7,10 @@ var key = false
 
 var weight_modifier = 1:
 	set(value):
-		weight_modifier = value
-		jump_velocity = -400.0 / weight_modifier
-		scale = Vector2(value, value)
+		if value <= 2.25:
+			weight_modifier = value
+			jump_velocity = -400.0 / weight_modifier
+			scale = Vector2(value, value)
 var jump_velocity = -400.0 / weight_modifier
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
