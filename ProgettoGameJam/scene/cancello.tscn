@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://c7adbhdefgx6g"]
 
 [ext_resource type="Script" path="res://scene/cancello.gd" id="1_btbdk"]
-[ext_resource type="Texture2D" uid="uid://c7a8se806jo0m" path="res://icon.svg" id="1_lrbhi"]
+[ext_resource type="Texture2D" uid="uid://w2wxyu4mc8vs" path="res://sprite/gate.png" id="2_pfasm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8n1l4"]
 size = Vector2(64, 512)
@@ -66,9 +66,10 @@ collision_layer = 2
 collision_mask = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(7.62939e-06, -1.52588e-05)
-scale = Vector2(0.5, 4)
-texture = ExtResource("1_lrbhi")
+position = Vector2(-1.88989, -3.43323e-05)
+rotation = 1.5708
+scale = Vector2(0.823057, 1.07927)
+texture = ExtResource("2_pfasm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("RectangleShape2D_8n1l4")
